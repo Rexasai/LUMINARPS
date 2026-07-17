@@ -1,0 +1,775 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#8b0000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* LANDING PAGE */
+/* ========================= */
+
+#landing{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:fadeIn 1.2s;
+}
+
+.logo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 0 30px rgba(255,0,0,.8);
+}
+
+#landing h1{
+    margin-top:20px;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.subtitle{
+    margin-top:8px;
+    color:#ddd;
+    font-size:18px;
+}
+
+#playBtn{
+    margin-top:30px;
+    padding:15px 45px;
+    border:none;
+    border-radius:12px;
+    background:#ff2d2d;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#playBtn:hover{
+    transform:scale(1.05);
+    background:#ff4444;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+    display:flex;
+    align-items:center;
+    padding:15px 20px;
+    background:#5b0000;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.headerLogo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    margin-left:15px;
+}
+
+/* ========================= */
+/* HAMBURGER */
+/* ========================= */
+
+#menuBtn{
+
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+
+}
+
+#menuBtn:hover{
+
+    background:#d10000;
+
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.sidebar{
+
+    position:fixed;
+
+    left:-270px;
+
+    top:0;
+
+    width:260px;
+
+    height:100%;
+
+    background:rgba(25,25,25,.75);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    padding-top:80px;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:5px 0 25px rgba(0,0,0,.6);
+
+}
+
+.closeBtn{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    margin:12px 15px;
+
+    padding:15px 18px;
+
+    border-radius:12px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.25s;
+
+}
+
+.sidebar a:hover{
+
+    background:#d10000;
+
+    transform:translateX(8px);
+
+}
+
+/* ========================= */
+/* PAGE */
+/* ========================= */
+
+.page{
+
+    padding:25px;
+
+}
+
+/* ========================= */
+/* BANNER */
+/* ========================= */
+
+.banner{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:25px;
+
+    margin-bottom:35px;
+
+}
+
+.banner img{
+
+    width:95%;
+
+    max-width:1100px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 30px rgba(255,0,0,.8);
+
+    animation:bannerFade 1.2s ease;
+
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes fadeIn{
+
+0%{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes bannerFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========================= */
+/* WARNING BOX */
+/* ========================= */
+
+.warningBox{
+
+    width:95%;
+
+    margin:25px auto;
+
+    padding:25px;
+
+    background:#6b0000;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 0 20px rgba(255,0,0,.35);
+
+    transition:.3s;
+
+}
+
+.warningBox:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 30px rgba(255,0,0,.6);
+
+}
+
+.warningBox h2{
+
+    margin-bottom:18px;
+
+    color:#FFD54F;
+
+    font-size:24px;
+
+}
+
+.warningBox p{
+
+    line-height:1.8;
+
+    color:#eee;
+
+    font-size:16px;
+
+}
+
+/* ========================= */
+/* SHOP */
+/* ========================= */
+
+.shopGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+/* ========================= */
+/* ROLE CARD */
+/* ========================= */
+
+.card{
+
+    background:#5b0000;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:0 0 18px rgba(255,0,0,.35);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 30px rgba(255,0,0,.8);
+
+}
+
+.card img{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:contain;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    font-size:18px;
+
+    color:#FFD54F;
+
+    margin-bottom:18px;
+
+    font-weight:bold;
+
+}
+
+/* ========================= */
+/* BUY BUTTON */
+/* ========================= */
+
+.card button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff2b2b;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    background:#ff5555;
+
+    transform:scale(1.03);
+
+}
+
+/* ========================= */
+/* FAQ & HELP */
+/* ========================= */
+
+#faq h2,
+#help h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+#help a{
+
+    color:#4FC3F7;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+}
+
+#help a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ========================= */
+/* POPUP */
+/* ========================= */
+
+.popup{
+
+    display:none;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(6px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.popupContent{
+
+    width:92%;
+
+    max-width:420px;
+
+    background:#5b0000;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 0 30px rgba(255,0,0,.7);
+
+    animation:popupFade .35s ease;
+
+}
+
+.popupContent h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    color:#FFD54F;
+
+}
+
+.popupContent label{
+
+    display:block;
+
+    margin-top:12px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+.popupContent input,
+.popupContent select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:#7b0000;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.popupContent input::placeholder{
+
+    color:#ddd;
+
+}
+
+.popupButton{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.popupButton button{
+
+    flex:1;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.popupButton button:first-child{
+
+    background:#555;
+
+    color:white;
+
+}
+
+.popupButton button:last-child{
+
+    background:#ff2d2d;
+
+    color:white;
+
+}
+
+.popupButton button:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    text-align:center;
+
+    background:#4a0000;
+
+    color:#ddd;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.logo{
+
+    width:140px;
+
+    height:140px;
+
+}
+
+#landing h1{
+
+    font-size:32px;
+
+}
+
+.subtitle{
+
+    font-size:16px;
+
+}
+
+.headerLogo{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.banner img{
+
+    width:100%;
+
+}
+
+.warningBox{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
+.card img{
+
+    width:90px;
+
+    height:90px;
+
+}
+
+.card h3{
+
+    font-size:20px;
+
+}
+
+.card p{
+
+    font-size:17px;
+
+}
+
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes popupFade{
+
+0%{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#4a0000;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d10000;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff2d2d;
+
+}

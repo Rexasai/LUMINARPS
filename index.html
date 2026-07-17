@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luminar Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= LANDING PAGE ================= -->
+
+<div id="landing">
+
+<img src="assets/logo.png" class="logo" alt="Luminar Logo">
+
+<h1>LUMINAR PS</h1>
+
+<p class="subtitle">
+Official Growtopia Private Server
+</p>
+
+<button id="playBtn">
+PLAY NOW
+</button>
+
+</div>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div id="sidebar" class="sidebar">
+
+<span class="closeBtn">&times;</span>
+
+<a href="#" onclick="showPage('home')">
+🏠 HOME
+</a>
+
+<a href="#" onclick="showPage('shop')">
+🛒 SHOP
+</a>
+
+<a href="#" onclick="showPage('faq')">
+❓ FAQ
+</a>
+
+<a href="#" onclick="showPage('help')">
+💬 HELP
+</a>
+
+</div>
+
+<!-- ================= DASHBOARD ================= -->
+
+<div id="dashboard">
+
+<header>
+
+<span id="menuBtn">
+&#9776;
+</span>
+
+<img src="assets/logo.png"
+class="headerLogo">
+
+</header>
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="page">
+
+<!-- Banner -->
+
+<div class="banner">
+
+<img src="assets/banner.png">
+
+</div>
+
+<!-- WARNING -->
+
+<div class="warningBox">
+
+<h2>
+⚠ WARNING & SERVER RULES
+</h2>
+
+<p>
+
+Selamat datang di Website Resmi
+<b>Luminar PS</b>.
+
+<br><br>
+
+Dengan memasuki server ini,
+seluruh pemain dianggap telah
+membaca dan menyetujui
+seluruh peraturan server.
+
+<br><br>
+
+1. Dilarang menggunakan Cheat,
+Mod Menu maupun Bot.
+
+<br><br>
+
+2. Dilarang Bug Abuse
+yang merugikan server.
+
+<br><br>
+
+3. Dilarang Scam,
+Penipuan ataupun
+Impersonate Admin.
+
+<br><br>
+
+4. Hormati seluruh Player
+dan Staff Luminar PS.
+
+<br><br>
+
+5. Gunakan bahasa yang sopan.
+
+<br><br>
+
+6. Dilarang memperjualbelikan
+akun tanpa izin Owner.
+
+<br><br>
+
+7. Pembelian Role
+hanya dilakukan melalui
+Website Resmi Luminar PS.
+
+<br><br>
+
+8. Admin berhak
+mengubah peraturan
+kapan saja.
+
+<br><br>
+
+Terima kasih telah
+mendukung Luminar PS.
+
+Semoga pengalaman bermain
+Anda menyenangkan.
+
+</p>
+
+</div>
+
+<!-- GLOBAL TIME -->
+
+<div class="warningBox">
+
+<h2>
+🌍 GLOBAL TIME
+</h2>
+
+<p id="clock">
+
+00:00:00
+
+</p>
+
+</div>
+
+<!-- PLAYER ONLINE -->
+
+<div class="warningBox">
+
+<h2>
+🟢 PLAYER ONLINE
+</h2>
+
+<p>
+
+Online Players :
+<b>1,245</b>
+
+<br><br>
+
+Peak Today :
+<b>1,932</b>
+
+</p>
+
+</div>
+
+<!-- SERVER QUALITY -->
+
+<div class="warningBox">
+
+<h2>
+
+📊 SERVER QUALITY
+
+</h2>
+
+<p>
+
+Quality :
+★★★★★
+
+<br><br>
+
+CPU Usage :
+14%
+
+<br><br>
+
+RAM Usage :
+31%
+
+<br><br>
+
+Ping :
+18 ms
+
+<br><br>
+
+Status :
+<span style="color:lime;">
+ONLINE
+</span>
+
+</p>
+
+</div>
+
+  </section>
+
+<!-- ================= SHOP ================= -->
+
+<section id="shop" class="page" style="display:none;">
+
+<div class="shopGrid">
+
+<div class="card">
+<img src="assets/roles/adventure.png" alt="Adventure">
+<h3>Adventure</h3>
+<p>Rp 15.000</p>
+<button onclick="buyRole('Adventure','Rp 15.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/squire.png" alt="Squire">
+<h3>Squire</h3>
+<p>Rp 25.000</p>
+<button onclick="buyRole('Squire','Rp 25.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/warrior.png" alt="Warrior">
+<h3>Warrior</h3>
+<p>Rp 30.000</p>
+<button onclick="buyRole('Warrior','Rp 30.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/ranger.png" alt="Ranger">
+<h3>Ranger</h3>
+<p>Rp 35.000</p>
+<button onclick="buyRole('Ranger','Rp 35.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/knight.png" alt="Knight">
+<h3>Knight</h3>
+<p>Rp 50.000</p>
+<button onclick="buyRole('Knight','Rp 50.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/paladin.png" alt="Paladin">
+<h3>Paladin</h3>
+<p>Rp 70.000</p>
+<button onclick="buyRole('Paladin','Rp 70.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/archmage.png" alt="Archmage">
+<h3>Archmage</h3>
+<p>Rp 85.000</p>
+<button onclick="buyRole('Archmage','Rp 85.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/warden.png" alt="Warden">
+<h3>Warden</h3>
+<p>Rp 110.000</p>
+<button onclick="buyRole('Warden','Rp 110.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/dragonslayer.png" alt="Dragon Slayer">
+<h3>Dragon Slayer</h3>
+<p>Rp 120.000</p>
+<button onclick="buyRole('Dragon Slayer','Rp 120.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/champions.png" alt="Champions">
+<h3>Champions</h3>
+<p>Rp 135.000</p>
+<button onclick="buyRole('Champions','Rp 135.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/hero.png" alt="Hero">
+<h3>Hero</h3>
+<p>Rp 150.000</p>
+<button onclick="buyRole('Hero','Rp 150.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/mythical.png" alt="Mythical">
+<h3>Mythical</h3>
+<p>Rp 200.000</p>
+<button onclick="buyRole('Mythical','Rp 200.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/celestial.png" alt="Celestial">
+<h3>Celestial</h3>
+<p>Rp 230.000</p>
+<button onclick="buyRole('Celestial','Rp 230.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/ascendan.png" alt="Ascendan">
+<h3>Ascendan</h3>
+<p>Rp 250.000</p>
+<button onclick="buyRole('Ascendan','Rp 250.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/sovereign.png" alt="Sovereign">
+<h3>Sovereign</h3>
+<p>Rp 340.000</p>
+<button onclick="buyRole('Sovereign','Rp 340.000')">BUY</button>
+</div>
+
+<div class="card">
+<img src="assets/roles/luminary.png" alt="Luminary">
+<h3>Luminary</h3>
+<p>Rp 450.000</p>
+<button onclick="buyRole('Luminary','Rp 450.000')">BUY</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section id="faq" class="page" style="display:none;">
+
+<h2>❓ FAQ</h2>
+
+<div class="warningBox">
+
+<b>Bagaimana cara membeli Role?</b>
+
+<br><br>
+
+Masuk ke menu SHOP → pilih Role → tekan BUY → isi Nama GTPS → pilih metode pembayaran → tekan CONTINUE.
+
+<br><br>
+
+<b>Kapan Role masuk?</b>
+
+<br><br>
+
+Role akan diproses oleh Owner setelah pembayaran dikonfirmasi.
+
+<br><br>
+
+<b>Apakah pembayaran aman?</b>
+
+<br><br>
+
+Ya, selama transaksi dilakukan melalui Website Resmi Luminar PS.
+
+</div>
+
+</section>
+
+<!-- ================= HELP ================= -->
+
+<section id="help" class="page" style="display:none;">
+
+<h2>💬 HELP</h2>
+
+<div class="warningBox">
+
+Owner WhatsApp
+
+<br><br>
+
+<a href="https://wa.me/6285177475595" target="_blank">
+
+085177475595
+
+</a>
+
+<br><br>
+
+Jika mengalami kendala saat pembelian,
+silakan hubungi Owner melalui WhatsApp.
+
+</div>
+
+</section>
+
+  <!-- ================= POPUP PURCHASE ================= -->
+
+<div id="popup" class="popup" style="display:none;">
+
+    <div class="popupContent">
+
+        <h2>🛒 PURCHASE ROLE</h2>
+
+        <label>Nama User GTPS Luminar PS</label>
+        <input
+            type="text"
+            id="username"
+            placeholder="Masukkan nama GTPS">
+
+        <br><br>
+
+        <label>Nama Role Yang Dibeli</label>
+        <input
+            type="text"
+            id="role"
+            readonly>
+
+        <br><br>
+
+        <label>Harga</label>
+        <input
+            type="text"
+            id="price"
+            readonly>
+
+        <br><br>
+
+        <label>Metode Pembayaran</label>
+
+        <select id="payment">
+
+            <option value="">
+                SELECT
+            </option>
+
+            <option value="DANA">
+                DANA
+            </option>
+
+            <option value="OVO">
+                OVO
+            </option>
+
+            <option value="GOPAY">
+                GOPAY
+            </option>
+
+            <option value="QRIS">
+                QRIS
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <div class="popupButton">
+
+            <button onclick="closePopup()">
+                CANCEL
+            </button>
+
+            <button onclick="continueBuy()">
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Luminar PS
+
+        <br>
+
+        Official Growtopia Private Server
+
+    </p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
